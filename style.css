@@ -1,0 +1,95 @@
+:root {
+    --font: "Consolas", Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: hsl(0, 0%, 15%);
+    overflow: hidden;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    font-size: 2rem;
+    color: white;
+}
+
+.rounded-full {
+    border-radius: 100%;
+}
+
+.rounded-three-quarter {
+    border-radius: 75px;
+}
+
+.rounded-half {
+    border-radius: 50px;
+}
+
+.rounded-quarter {
+    border-radius: 25px;
+}
+
+hr {
+    border: 5px solid white;
+}
+
+.moon-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+@keyframes spin-moon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.score {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    font-size: 2rem;
+    color: white;
+}
+
+#moon {
+    animation: spin-moon 200s linear infinite;
+    width: 30%;
+    transition: width 0.03s ease-in-out;
+}
+
+#moon:active{
+    width: 28%;
+}
+
+.upgrades button {
+    border: none;
+    padding: 30px 40px;
+    cursor: pointer;
+    font-size: xx-large;
+    font-family: var(--font);
+    font-weight: bolder;
+    background-color: white;
+    display: block;
+    margin-top: 5px;
+}
+
+.upgrades button:hover {
+    background-color: lightgray;
+}
+
+.upgrades button:active {
+    background-color: gray;
+}
